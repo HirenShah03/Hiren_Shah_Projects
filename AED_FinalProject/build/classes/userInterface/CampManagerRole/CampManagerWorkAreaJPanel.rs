@@ -1,0 +1,3 @@
+UserInterface.CampManagerRole.CampManagerWorkAreaJPanel
+UserInterface.CampManagerRole.CampManagerWorkAreaJPanel$2
+UserInterface.CampManagerRole.CampManagerWorkAreaJPanel$1

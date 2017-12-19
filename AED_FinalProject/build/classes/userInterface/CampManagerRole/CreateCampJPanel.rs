@@ -1,0 +1,2 @@
+UserInterface.CampManagerRole.CreateCampJPanel$1
+UserInterface.CampManagerRole.CreateCampJPanel

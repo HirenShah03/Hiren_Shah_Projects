@@ -1,0 +1,4 @@
+userInterface.DoctorRole.ViewCampsJPanel$1
+userInterface.DoctorRole.ViewCampsJPanel
+userInterface.DoctorRole.ViewCampsJPanel$2
+userInterface.DoctorRole.ViewCampsJPanel$3

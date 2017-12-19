@@ -1,0 +1,9 @@
+UserInterface.User.ManageRequestsJPanel$2
+UserInterface.User.ManageRequestsJPanel$3
+UserInterface.User.ManageRequestsJPanel$4
+UserInterface.User.ManageRequestsJPanel$5
+UserInterface.User.ManageRequestsJPanel$1
+UserInterface.User.ManageRequestsJPanel$6
+UserInterface.User.ManageRequestsJPanel
+UserInterface.User.ManageRequestsJPanel$7
+UserInterface.User.ManageRequestsJPanel$8

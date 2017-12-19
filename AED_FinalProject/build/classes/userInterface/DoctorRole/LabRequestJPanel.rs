@@ -1,0 +1,6 @@
+UserInterface.DoctorRole.LabRequestJPanel$3
+UserInterface.DoctorRole.LabRequestJPanel$4
+UserInterface.DoctorRole.LabRequestJPanel$5
+UserInterface.DoctorRole.LabRequestJPanel$1
+UserInterface.DoctorRole.LabRequestJPanel$2
+UserInterface.DoctorRole.LabRequestJPanel

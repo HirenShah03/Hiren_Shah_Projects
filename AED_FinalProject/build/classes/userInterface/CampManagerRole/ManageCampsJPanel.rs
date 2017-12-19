@@ -1,0 +1,6 @@
+UserInterface.CampManagerRole.ManageCampsJPanel$5
+UserInterface.CampManagerRole.ManageCampsJPanel$1
+UserInterface.CampManagerRole.ManageCampsJPanel$2
+UserInterface.CampManagerRole.ManageCampsJPanel$3
+UserInterface.CampManagerRole.ManageCampsJPanel$4
+UserInterface.CampManagerRole.ManageCampsJPanel

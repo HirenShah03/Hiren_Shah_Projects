@@ -1,0 +1,12 @@
+userInterface.DoctorRole.DoctorWorkAreaJPanel$1
+userInterface.DoctorRole.DoctorWorkAreaJPanel$2
+userInterface.DoctorRole.DoctorWorkAreaJPanel$11
+userInterface.DoctorRole.DoctorWorkAreaJPanel
+userInterface.DoctorRole.DoctorWorkAreaJPanel$3
+userInterface.DoctorRole.DoctorWorkAreaJPanel$10
+userInterface.DoctorRole.DoctorWorkAreaJPanel$8
+userInterface.DoctorRole.DoctorWorkAreaJPanel$9
+userInterface.DoctorRole.DoctorWorkAreaJPanel$4
+userInterface.DoctorRole.DoctorWorkAreaJPanel$5
+userInterface.DoctorRole.DoctorWorkAreaJPanel$6
+userInterface.DoctorRole.DoctorWorkAreaJPanel$7

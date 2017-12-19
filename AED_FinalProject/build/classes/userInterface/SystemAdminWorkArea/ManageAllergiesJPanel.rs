@@ -1,0 +1,9 @@
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$6
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$5
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$8
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$7
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$2
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$1
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$4
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel$3
+UserInterface.SystemAdminWorkArea.ManageAllergiesJPanel
