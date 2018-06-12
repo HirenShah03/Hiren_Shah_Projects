@@ -1,5 +1,4 @@
-# final-project-the-5-musketeers
-final-project-the-5-musketeers created by GitHub Classroom
+# Web Final Project
 Feature requirement:
  
 
@@ -79,11 +78,5 @@ $ npm start
 -- Access API at: http://localhost:3000
 
 
-Contributors
-AJ
-Jigar
-Hiren
-Pranesh
-Tarangini
 
 No license.
