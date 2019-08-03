@@ -24,13 +24,13 @@ public class Category {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="categoryID", unique = true, nullable = false)
-    private long categoryId;
+        private long categoryId;
 	
 	@Column(name="name", unique=true, nullable = false)
-    private String name;
+        private String name;
     
-	@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable (
+       @ManyToMany(fetch = FetchType.EAGER)
+       @JoinTable (
        name="category_product_table",
        joinColumns = {@JoinColumn(name="categoryID", nullable = false, updatable = false)},
        inverseJoinColumns = {@JoinColumn(name="prod_id" )}
