@@ -16,10 +16,10 @@ public class Housing {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="housingID", unique = true, nullable = false)
-    private long id;
+        private long id;
 
 	@Column(name="title")
-    private String title;
+        private String title;
 
 	@Column(name="aptno")
 	private String aptNo;
