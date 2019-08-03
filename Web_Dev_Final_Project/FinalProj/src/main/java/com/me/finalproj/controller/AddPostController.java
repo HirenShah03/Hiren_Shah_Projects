@@ -40,11 +40,11 @@ public class AddPostController {
 	public static  boolean validateSession(HttpServletRequest request) {
 		HttpSession session = (HttpSession) request.getSession();
 
-if(!(session.getAttribute("user")==null)) {
-	return true;
-}
-else
-return false;
-}
+	if(!(session.getAttribute("user")==null)) {
+		return true;
+	}
+	else
+		return false;
+	}
 
 }
