@@ -42,16 +42,15 @@ public class UserController {
 	@RequestMapping(value = "/user/*", method = RequestMethod.GET)
 	protected String loginUser(HttpServletRequest request) {
 		if(validateSession(request)) {
-		return "home";
+		  return "home";
 		}else
-			return null;
+		  return null;
 	}
 	@RequestMapping(value = "/user/login", method = RequestMethod.POST)
 	protected ModelAndView loginUser(HttpServletRequest request,  @ModelAttribute("user") User user, BindingResult result) throws Exception {
 		HttpSession session = (HttpSession) request.getSession();
 		try {
 
-			System.out.println("loginUser");
 			User u = userDao.get(user.getUserName(),user.getPassword());
 			
 			if (u != null && u.getStatus() == 1) {
@@ -124,7 +123,6 @@ public class UserController {
 	{
 		String result = null;
 		String username=request.getParameter("username");
-//		System.out.println("here"+request.getParameter("id"));
 		try {
 			 boolean flag=userDao.getUserName(username);
 			 if(flag) {
