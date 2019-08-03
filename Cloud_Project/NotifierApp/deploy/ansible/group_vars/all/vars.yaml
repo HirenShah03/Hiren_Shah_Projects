@@ -1,0 +1,7 @@
+---
+
+cluster_name: k8s.csye6225-fall2018-nigama.me
+state_store: s3://k8s.csye6225-fall2018-nigama.me
+node_count: 3
+ecr_repo: 338969645766.dkr.ecr.us-east-1.amazonaws.com
+bucket_name: webapp-csye7374-nigama

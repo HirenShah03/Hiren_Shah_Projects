@@ -1,0 +1,25 @@
+---
+
+- name: Kafka initialization
+  command: helm install --name {{kafka_topic_name}} -f roles/helm/kafka/tasks/values.yaml incubator/kafka
+
+- name: Get kafka service ip in container env
+  command: kubectl get service {{kafka_topic_name}}-kafka -o jsonpath="{.spec.clusterIP}"
+  register: service_ip
+
+- debug: var=service_ip.stdout_lines[0]
+
+- name: Get kafka service port in container env
+  command: kubectl get service {{kafka_topic_name}}-kafka -o jsonpath="{.spec.ports[0].port}"
+  register: service_port
+
+- debug: var=service_port.stdout_lines[0]
+
+- name: Set kafka service ip in container env
+  command: kubectl create configmap kafka-ip --from-literal=kafka_service_ip={{service_ip.stdout_lines[0]}}
+
+- name: Set kafka service port in container env
+  command: kubectl create configmap kafka-port --from-literal=kafka_service_port={{service_port.stdout_lines[0]}}
+
+- name: Set kafka topic name in container env
+  command: kubectl create configmap kafka-topic --from-literal=kafka_topic_name={{kafka_topic_name}}

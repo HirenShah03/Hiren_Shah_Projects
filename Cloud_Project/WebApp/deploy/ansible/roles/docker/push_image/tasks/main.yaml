@@ -1,0 +1,13 @@
+---
+
+- name: Retrieving ECR login
+  shell: sudo $(aws ecr get-login --no-include-email --region us-east-1)
+
+- name: Push Web app Docker image
+  command: sudo docker push {{ ecr_repo }}/csye7374:latest
+
+- name: Push Kafka init Docker image
+  command: sudo docker push {{ ecr_repo }}/kafka:latest
+
+- name: Push Kafka init Docker image
+  command: sudo docker push {{ ecr_repo }}/db:latest

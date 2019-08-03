@@ -1,0 +1,10 @@
+---
+
+cluster_name: k8s.csye6225-fall2018-nigama.me
+state_store: s3://k8s.csye6225-fall2018-nigama.me
+node_count: 3
+ecr_repo: 338969645766.dkr.ecr.us-east-1.amazonaws.com
+bucket_name: csye7374-spring2019-nigama
+kafka_topic_name: csye7374
+db_instance: csye7374
+infra_profile: user1

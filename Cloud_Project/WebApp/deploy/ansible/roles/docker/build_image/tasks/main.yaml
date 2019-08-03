@@ -1,0 +1,26 @@
+---
+
+- name: Retrieving ECR login
+  shell: sudo $(aws ecr get-login --no-include-email --region us-east-1)
+
+- name: Build Web app Docker image
+  shell: cd ../../webapp && sudo mvn install && sudo docker build --no-cache -t csye7374 .
+
+- name: Tag Web app Docker image
+  command: sudo docker tag csye7374:latest {{ ecr_repo }}/csye7374:latest
+
+- name: Build Kafka init Docker image
+  shell: cd ../../webapp && sudo docker build -f init.kafka.Dockerfile -t kafka .
+
+- name: Tag Kafka init Docker image
+  command: sudo docker tag kafka:latest {{ ecr_repo }}/kafka:latest
+ 
+- name: Build DB app Docker image
+  shell: cd ../../webapp && sudo docker build --no-cache -f db.Dockerfile -t db .
+
+- name: Tag DB init Docker image
+  command: sudo docker tag db:latest {{ ecr_repo }}/db:latest
+
+- name: Remove old images
+  shell: sudo docker rmi -f $(sudo docker images -q -f 'dangling=true')
+  ignore_errors: yes  

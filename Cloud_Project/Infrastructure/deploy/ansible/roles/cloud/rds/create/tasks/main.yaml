@@ -1,0 +1,25 @@
+---
+
+- name: Waiting for RDS instance to start
+  command: aws rds describe-db-instances --db-instance-identifier {{db_instance}} --query "DBInstances[*].Endpoint.Address" --profile={{infra_profile}}
+  register: rds_facts
+
+- name: Set ECR repo name in comtainer env
+  command: kubectl create configmap db-host --from-literal=db_host={{rds_facts.stdout_lines[1]|trim}}
+
+- name: Set ECR repo name in comtainer env
+  command: kubectl create configmap db-endpoint --from-literal=db_endpoint=jdbc:postgresql://{{rds_facts.stdout_lines[1]|trim}}:5432/csye7374
+
+
+
+- name: Set SNS topic name
+  command: aws sns list-topics --query "Topics[*].TopicArn" --profile={{infra_profile}}
+  register: sns_topic
+
+- set_fact:
+    a: sns_topic.stdout_lines[1] | trim
+
+- debug: var={{a}}
+
+- name: Set SNS  name in comtainer env
+  command: kubectl create configmap sns-arn --from-literal=sns_arn={{sns_topic.stdout_lines[1] | trim}}
