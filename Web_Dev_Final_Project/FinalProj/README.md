@@ -1,5 +1,5 @@
 Project: One MarketPlace Website					   	             
-•	Designed an application using Spring & Hibernate, which can help users to connect with each other for renting a house or selling their used/unused products
+•	Designed an application using Spring & Hibernate, which can help users to connect with each other for renting a house or selling their used/unused products \n
 •	Registered/authenticated users while logging-in, Retained the advertisement data in MySQL database
 •	Implemented autocomplete quick search, filtered search, rejecting duplicate email-id using AJAX; reduced the user search time by 30%
 
