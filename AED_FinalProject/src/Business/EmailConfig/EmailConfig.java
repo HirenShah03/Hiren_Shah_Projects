@@ -103,20 +103,6 @@ public class EmailConfig {
 		Multipart multipart = new MimeMultipart();
 		multipart.addBodyPart(messageBodyPart);
 
-		// adds attachments
-//		if (attachFiles != null && attachFiles.length > 0) {
-//			for (File aFile : attachFiles) {
-//				MimeBodyPart attachPart = new MimeBodyPart();
-//
-//				try {
-//					attachPart.attachFile(aFile);
-//				} catch (IOException ex) {
-//					throw ex;
-//				}
-//
-//				multipart.addBodyPart(attachPart);
-//			}
-//		}
 
 		// sets the multi-part as e-mail's content
 		msg.setContent(multipart);
