@@ -48,9 +48,7 @@ public class HousingController {
 		if(validateSession(request)) {
 
 		HttpSession session = (HttpSession) request.getSession();
-//		String uploadPath="F:\\MS Work\\SEM2\\Web Development\\Java_Workspace_Eclipse\\FinalProj\\data\\";
 		String uploadPath=context.getRealPath(File.separator)+"\\resources\\data\\";
-//		System.out.println(context.getContextPath());
 		System.out.println(uploadPath);
 		System.out.println(System.getProperty("user.dir"));
 		String title=request.getParameter("title");
@@ -67,9 +65,9 @@ public class HousingController {
 		housing.setImagepath("\\resources\\data\\"+file.getOriginalFilename());
 		housing.setUser((User)session.getAttribute("user"));
 		
-        FileCopyUtils.copy(file.getBytes(), new File(uploadPath+file.getOriginalFilename()));
+        	FileCopyUtils.copy(file.getBytes(), new File(uploadPath+file.getOriginalFilename()));
 		request.setAttribute("product", product);
-        housingDao.addHousing(housing);
+       	        housingDao.addHousing(housing);
 		return new ModelAndView("addpost","success","Housing Successfully Posted!!");
 		}else {
 			return new ModelAndView("home","errorMessage","Your Session Expired, kindly try to login again");
@@ -96,10 +94,9 @@ public class HousingController {
 			List<Housing> housingList=housingDao.getPending();
 			housingJson = new Gson().toJson(housingList);
 			System.out.println(housingJson);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		    } catch (Exception e) {
 			e.printStackTrace();
-		}
+		 }
 		}
 		return housingJson;
 	}
@@ -115,7 +112,6 @@ public class HousingController {
 
 		long id=Long.parseLong(request.getParameter("id"));
 		String decision=request.getParameter("decision");
-		System.out.println("here"+request.getParameter("id"));
 		try {
 			 boolean flag=housingDao.updateRequest(id,decision);
 			 if(flag) {
@@ -168,10 +164,9 @@ public class HousingController {
 			List<Housing> housingList=housingDao.getSearched(search);
 			housingJson = new Gson().toJson(housingList);
 			System.out.println(housingJson);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		    } catch (Exception e) {
 			e.printStackTrace();
-		}
+		    }
 		}
 		return housingJson;
 	}
@@ -184,6 +179,6 @@ public class HousingController {
 			return true;
 		}
 		else
-		return false;
+			return false;
 	}
 }
