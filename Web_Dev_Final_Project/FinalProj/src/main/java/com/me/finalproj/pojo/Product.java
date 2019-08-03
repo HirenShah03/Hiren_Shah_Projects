@@ -23,19 +23,19 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="prod_id", unique = true, nullable = false)
-    private long id;
+        private long id;
 	
 	@Column(name="title")
-    private String title;
+        private String title;
 
 	@Column(name="status")
-    private String status;
+        private String status;
 
-	@Column(name="quotation")
-    private int quotation;
+ 	@Column(name="quotation")
+        private int quotation;
 
 	@Column(name="description")
-    private String description;
+        private String description;
 	
 	@Column(name="imagepath")
 	private String imagepath;
